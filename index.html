@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(207, 232, 247);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    width:670px;
+    height: 1100px;
+    margin: 8% auto;
+    background: linear-gradient(to top, #79c5d1, #d5f3f3);
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    
+}
+h3{
+    text-align: center;
+    margin-bottom:40px ;
+    color: black;
+    font-size: xx-large;
+    
+}
+.container form{
+    width: 600px;
+    position: absolute;
+    top: 50px;
+    left: 40px;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select, textarea{
+    width: 42%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+input[type="date"]{
+    width: 92%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+}
+#coun_try{
+    width: 273px;
+}
+#em, #na, #ho, #th, #tm, #insti, #hsc, #per, #si, #cur, #ov, #log, #ad{
+    width: 92%;
+    padding: 12px;
+    margin: 10px;
+}
+input[type="file"]{
+    width: 92%;
+    padding: 12px;
+    margin: 10px;
+}
+#ssc, #log{
+    width: 96%;
+    padding: 12px;
+    margin: 10px;
+}
+::placeholder{
+    color: rgb(15, 15, 56);
+}
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: #56a7b4;
+    border-radius: 10px;
+    cursor: pointer;
+}
+form button:hover{
+    background: #3e8b97;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+}
+
+#form2{
+    left: 680px;
+    overflow: hidden;
+}
+#form3{
+    left: 1000px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <form id="form1">
+            <h3><u>PERSONAL DETAILS</u></h3>
+            <div class="fields">
+                
+                <label>Name*</label>
+                <div>
+                    <input type="text" placeholder="First" required>
+                    <input type="text" placeholder="Last" required>
+                </div> 
+            
+                <label>Date of Birth*</label>
+                <div>
+                    <input type="date" placeholder="Enter birth date" required>
+                </div> 
+                
+                <label>Email*</label>
+                <div>
+                    <input type="email" placeholder="Enter your email" id="em" required>
+                </div>
+                
+                <label>Father's name*</label>
+                <div>
+                    <input type="text" placeholder="First" required>
+                    <input type="text" placeholder="Last" required>
+                </div>
+                
+                <label>Mother's name*</label>
+                <div>
+                    <input type="text" placeholder="First" required>
+                    <input type="text" placeholder="Last" required>
+                </div>
+                
+                <label>Gender*</label>
+                <div>
+                    <input type="radio" name="gender" id="Male" required>
+                    <label>M</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="Female" required>
+                    <label>F</label>
+                </div>
+                
+                <label>Nationality*</label>
+                <div>
+                    <input type="text" id="na" required>
+                </div> 
+                
+                <div>
+                    <label>Home Address*</label>
+                </div> 
+                <input type="text" id="ad" required placeholder="Street Address">
+                <div>
+                    <input type="text" placeholder="City">
+                    <select name="country" id="coun_try" placeholder="Country" required>
+                        <option value="">--Country--</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Libya">Libya</option>
+                        <option value="Maldives">Maldives</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="South Korea">South Korea</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                    </select>
+                </div>
+                
+                <label>Telephone - Home*</label>
+                <div>
+                    <input type="tel" placeholder="### ### ####" id="th" required>
+                </div>
+                
+                <label>Telephone - Mobile*</label>
+                <div>
+                    <input type="tel" placeholder="### ### ####" id="tm" pattern="[0-9]{10}" required>
+                </div>
+                
+                <div class="btn-box">
+                    <button type="button" id="next1">Next</button>
+                </div>
+            </div>
+        </form>
+         
+        <form id="form2">
+            <div class="sec">
+                <div class="fields">
+                    <h3><u>EDUCATIONAL DETAILS</u></h3>
+                    <label>HSC Institution name*</label>
+                    <div>
+                        <input type="text" required id="insti"> 
+                    </div>
+                    
+                    <div>
+                        <label>HSC Board*</label>
+                    </div> 
+                    <select name="board" id="ssc" required>
+                        <option value="">--Board--</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="ICSE">ICSE</option>
+                        <option value="State board">State board</option>
+                    </select>
+                    
+                    <label>Percentage in HSC in percentage* (Don't use % e.g. 80)</label>
+                    <div>
+                        <input type="text" id="per" required>
+                    </div>  
+                    
+                    <label>SSC Institution name*</label>
+                    <div>
+                        <input type="text" id="si" required>
+                    </div>
+                    
+                    <div>
+                        <label>SSC Board*</label>
+                    </div> 
+                    <div>
+                        <select name="board" id="ssc" required>
+                            <option value="">--Board--</option>
+                            <option value="CBSE">CBSE</option>
+                            <option value="ICSE">ICSE</option>
+                            <option value="State board">State board</option>
+                        </select>
+                    </div>
+                    
+                    <label>Percentage in SSC in percentage* (Don't use % e.g. 80)</label>
+                    <div>
+                        <input type="text" id="per" required>
+                    </div>
+                    
+                    <label>Currently pursuing*</label>
+                    <div>
+                        <input type="text" id="cur" required>
+                    </div>
+                    
+                    <label>Current educational institution name*</label>
+                    <div>
+                        <input type="text" id="cur" required>
+                    </div>
+                    
+                    <label>Overall percentage* (Don't use % e.g. 80)</label>
+                    <div>
+                        <input type="text" id="ov" required>
+                    </div>
+                    
+                    <div>
+                        <label>Current backlogs if any*</label>
+                    </div> 
+                    <select name="back" id="log" required>
+                        <option value="">-</option>
+                        <option value="NO">NO</option>
+                        <option value="YES">YES</option>
+                    </select>
+                </div>
+                
+                <div class="btn-box">
+                   
+                    <button type="button" id="back1">Back</button>
+                    <button type="button" id="next2">Next</button>
+                </div>
+            
+            </div>
+              
+        </form>
+    
+        <form id="form3">
+            <div class="three">   
+                <div class="fields">
+                    <h3><u>EDUCATIONAL DETAILS</u></h3>
+                    <div class="input-field">
+                        <label>Upload recent passport size photograph (image size less than 4MB)</label>
+                        <div>
+                            <input type="file" id="fil" name="document">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Upload HSC mark sheet (image, PDF, or docs size less than 4MB)</label>
+                        <div>
+                            <input type="file" id="fil"  name="document">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>Upload SSC mark sheet (image, PDF, or docs size less than 4MB)</label>
+                        <div>
+                            <input type="file" id="fil"  name="document">
+                        </div>
+                    </div>
+
+                    <div class="input-field">
+                        <label>All semesters mark sheet in a single PDF or docs (file size less than 10MB)</label>
+                        <div>
+                            <input type="file" id="fil"  name="document">
+                        </div>
+                    </div>
+
+                    <div class="btn-box">
+                        <button type="button" id="back2">Back</button>
+                        <button type="submit" id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>     
+        </form>
+    </div>
+<script>
+    var form1 = document.getElementById("form1");
+    var form2 = document.getElementById("form2");
+    var form3 = document.getElementById("form3"); 
+
+    var next1 = document.getElementById("next1");
+    var next2 = document.getElementById("next2");
+    var back1 = document.getElementById("back1");
+    var back2 = document.getElementById("back2");
+
+    next1.onclick = function() {
+        form1.style.left = "-680px";
+        form2.style.left = "40px";
+    };
+
+    back1.onclick = function() {
+        form1.style.left = "50px";
+        form2.style.left = "680px";
+    };
+
+    next2.onclick = function() {
+        form2.style.left = "-680px";
+        form3.style.left = "40px";
+    };
+
+    back2.onclick = function() {
+        form2.style.left = "40px";
+        form3.style.left = "680px";
+    };
+
+    var thInput = document.getElementById("th");
+        thInput.onblur = function() {
+            var phoneNumber = thInput.value;
+            if (phoneNumber.length !== 10) {
+                alert("Please enter a valid 10-digit phone number.");
+                thInput.focus();
+            }
+        };
+
+    var tmInput = document.getElementById("tm");
+        tmInput.onblur = function() {
+            var phoneNumber = tmInput.value;
+            if (phoneNumber.length !== 10) {
+                alert("Please enter a valid 10-digit phone number.");
+                tmInput.focus();
+            }
+        };
+    
+    var emailInput = document.getElementById("em");
+        emailInput.onblur = function() {
+        var email = emailInput.value;
+        if (!isValidEmail(email)) {
+            alert("Please enter a valid email address.");
+            emailInput.focus();
+        }
+        };
+
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+        }
+</script>
+</body>
+</html>
